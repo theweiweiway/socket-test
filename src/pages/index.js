@@ -7,7 +7,7 @@ const IndexPage = () => (
     <button
       onClick={() =>
         axios
-          .get("http://localhost:3000")
+          .get("https://socket-test-api.azurewebsites.net/")
           .then(result => console.log(result))
           .catch(error => console.log("ERROR: " + error))
       }
@@ -16,7 +16,7 @@ const IndexPage = () => (
     </button>
     <button
       onClick={() => {
-        const socket = io("http://localhost:3000/chat")
+        const socket = io("https://socket-test-api.azurewebsites.net/chat")
       }}
     >
       TEST SOCKET
