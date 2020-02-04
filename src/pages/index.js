@@ -4,7 +4,7 @@ import io from "socket.io-client"
 
 export default function IndexPage() {
   useEffect(() => {
-    const socket = io("https://socket-test-api.azurewebsites.net/chat", {
+    const socket = io("https://api.honeybeehub.io/chat", {
       transports: ["websocket"],
       upgrade: false,
     })
