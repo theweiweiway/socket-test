@@ -16,7 +16,10 @@ const IndexPage = () => (
     </button>
     <button
       onClick={() => {
-        const socket = io("https://socket-test-api.azurewebsites.net/chat")
+        const socket = io("https://socket-test-api.azurewebsites.net/chat", {
+          transports: ["websocket"],
+          upgrade: false,
+        })
       }}
     >
       TEST SOCKET
